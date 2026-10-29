@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TempConvert Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+    <div class="bg-circle circle3"></div>
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+        <div class="converter">
+
+            <!-- Logo -->
+
+            <div class="logo">
+
+                <i class="fas fa-temperature-high"></i>
+
+            </div>
+
+            <!-- Heading -->
+
+            <h1>TempConvert Pro</h1>
+
+            <p class="subtitle">
+
+                Fast, Accurate & Professional Temperature Converter
+
+            </p>
+
+            <!-- Temperature -->
+
+            <div class="input-group">
+
+                <label for="temperature">
+
+                    Enter Temperature
+
+                </label>
+
+                <input
+                type="number"
+                id="temperature"
+                placeholder="Example : 25">
+
+            </div>
+
+            <!-- Units Row -->
+
+            <div class="unit-row">
+
+                <div class="input-group half">
+
+                    <label for="fromUnit">
+
+                        From
+
+                    </label>
+
+                    <select id="fromUnit">
+
+                        <option value="celsius">
+                            Celsius (°C)
+                        </option>
+
+                        <option value="fahrenheit">
+                            Fahrenheit (°F)
+                        </option>
+
+                        <option value="kelvin">
+                            Kelvin (K)
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group half">
+
+                    <label for="toUnit">
+
+                        To
+
+                    </label>
+
+                    <select id="toUnit">
+
+                        <option value="fahrenheit">
+                            Fahrenheit (°F)
+                        </option>
+
+                        <option value="celsius">
+                            Celsius (°C)
+                        </option>
+
+                        <option value="kelvin">
+                            Kelvin (K)
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="button-group">
+
+                <button id="convertBtn">
+
+                    <i class="fas fa-right-left"></i>
+
+                    Convert
+
+                </button>
+
+                <button id="resetBtn">
+
+                    <i class="fas fa-rotate"></i>
+
+                    Reset
+
+                </button>
+
+            </div>
+
+            <!-- Error -->
+
+            <p id="error"></p>
+
+                        <!-- Result -->
+
+            <div class="result-card">
+
+                <div class="result-header">
+
+                    <i class="fas fa-chart-line"></i>
+
+                    <h2>Conversion Result</h2>
+
+                </div>
+
+                <div class="result-content">
+
+                    <div class="from-box">
+
+                        <span class="title">FROM</span>
+
+                        <h3 id="fromValue">
+
+                            --
+
+                        </h3>
+
+                    </div>
+
+                    <div class="arrow">
+
+                        <i class="fas fa-arrow-down"></i>
+
+                    </div>
+
+                    <div class="to-box">
+
+                        <span class="title">TO</span>
+
+                        <h3 id="toValue">
+
+                            --
+
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Information -->
+
+            <div class="info-box">
+
+                <div class="info-item">
+
+                    <i class="fas fa-circle-info"></i>
+
+                    <p>
+
+                        Supports Celsius, Fahrenheit and Kelvin.
+
+                    </p>
+
+                </div>
+
+                <div class="info-item">
+
+                    <i class="fas fa-shield-halved"></i>
+
+                    <p>
+
+                        Includes Absolute Zero validation.
+
+                    </p>
+
+                </div>
+
+                <div class="info-item">
+
+                    <i class="fas fa-bolt"></i>
+
+                    <p>
+
+                        Fast and accurate temperature conversion.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

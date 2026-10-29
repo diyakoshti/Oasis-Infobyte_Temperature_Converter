@@ -1,0 +1,734 @@
+/*==========================================
+            GOOGLE FONT
+==========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*==========================================
+                RESET
+==========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#4B2E83,#1B2A6B,#0B1F3A);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:40px 20px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/*==========================================
+        BACKGROUND CIRCLES
+==========================================*/
+
+.bg-circle{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(30px);
+
+    opacity:.35;
+
+    z-index:0;
+
+}
+
+.circle1{
+
+    width:280px;
+
+    height:280px;
+
+    background:#D4AF37;
+
+    top:-90px;
+
+    left:-90px;
+
+}
+
+.circle2{
+
+    width:350px;
+
+    height:350px;
+
+    background:#8B5CF6;
+
+    right:-120px;
+
+    bottom:-120px;
+
+}
+
+.circle3{
+
+    width:180px;
+
+    height:180px;
+
+    background:#ffffff;
+
+    top:20%;
+
+    right:12%;
+
+}
+
+/*==========================================
+            CONTAINER
+==========================================*/
+
+.container{
+
+    width:100%;
+
+    max-width:620px;
+
+    margin:30px auto;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==========================================
+            MAIN CARD
+==========================================*/
+
+.converter{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+/*==========================================
+                LOGO
+==========================================*/
+
+.logo{
+
+    width:95px;
+
+    height:95px;
+
+    margin:0 auto 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#FFD56B,#D4AF37);
+
+    color:#4B2E83;
+
+    font-size:42px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.logo i{
+
+    animation:float 2s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================
+            TITLE
+==========================================*/
+
+h1{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#F3F3F3;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+/*==========================================
+            INPUT SECTION
+==========================================*/
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    margin-bottom:8px;
+
+}
+
+.input-group input,
+.input-group select{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:16px;
+
+    color:#333;
+
+    transition:.3s;
+
+}
+
+.input-group input:focus,
+.input-group select:focus{
+
+    box-shadow:0 0 15px rgba(212,175,55,.7);
+
+}
+
+/*==========================================
+            UNIT ROW
+==========================================*/
+
+.unit-row{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.half{
+
+    flex:1;
+
+}
+
+/*==========================================
+            BUTTONS
+==========================================*/
+
+.button-group{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.button-group button{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.button-group i{
+
+    margin-right:8px;
+
+}
+
+#convertBtn{
+
+    background:linear-gradient(135deg,#7F5AF0,#5B3CC4);
+
+    color:white;
+
+}
+
+#convertBtn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(127,90,240,.45);
+
+}
+
+#resetBtn{
+
+    background:#D4AF37;
+
+    color:#0B1F3A;
+
+}
+
+#resetBtn:hover{
+
+    background:#FFD56B;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(212,175,55,.45);
+
+}
+
+/*==========================================
+            ERROR MESSAGE
+==========================================*/
+
+#error{
+
+    min-height:30px;
+
+    margin-top:18px;
+
+    text-align:center;
+
+    color:#FFD4D4;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/*==========================================
+            RESULT CARD
+==========================================*/
+
+.result-card{
+
+    margin-top:30px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    animation:fadeIn .5s ease;
+
+}
+
+.result-header{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+.result-header i{
+
+    color:#7F5AF0;
+
+    font-size:28px;
+
+}
+
+.result-header h2{
+
+    color:#4B2E83;
+
+    font-size:28px;
+
+}
+
+.result-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.from-box,
+.to-box{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:#F7F7FB;
+
+    transition:.3s;
+
+}
+
+.from-box:hover,
+.to-box:hover{
+
+    background:#EFEAFF;
+
+}
+
+.title{
+
+    display:block;
+
+    font-size:14px;
+
+    color:#666;
+
+    margin-bottom:8px;
+
+    letter-spacing:1px;
+
+}
+
+#fromValue,
+#toValue{
+
+    color:#0B1F3A;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.arrow{
+
+    margin:20px 0;
+
+}
+
+.arrow i{
+
+    font-size:30px;
+
+    color:#7F5AF0;
+
+    animation:moveArrow 1.5s infinite;
+
+}
+
+@keyframes moveArrow{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================
+            INFO BOX
+==========================================*/
+
+.info-box{
+
+    margin-top:30px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:15px;
+
+    padding:20px;
+
+}
+
+.info-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:white;
+
+    margin:12px 0;
+
+}
+
+.info-item i{
+
+    color:#FFD56B;
+
+    font-size:18px;
+
+}
+
+/*==========================================
+            FADE ANIMATION
+==========================================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================
+            RESPONSIVE
+==========================================*/
+
+@media(max-width:768px){
+
+    .converter{
+
+        padding:30px;
+
+    }
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+    .subtitle{
+
+        font-size:15px;
+
+    }
+
+    .unit-row{
+
+        flex-direction:column;
+
+        gap:0;
+
+    }
+
+    .button-group{
+
+        flex-direction:column;
+
+    }
+
+    .result-header h2{
+
+        font-size:24px;
+
+    }
+
+    #fromValue,
+    #toValue{
+
+        font-size:24px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    body{
+
+        padding:20px 12px;
+
+    }
+
+    .converter{
+
+        padding:22px;
+
+    }
+
+    .logo{
+
+        width:75px;
+
+        height:75px;
+
+        font-size:32px;
+
+    }
+
+    h1{
+
+        font-size:25px;
+
+    }
+
+    .subtitle{
+
+        font-size:14px;
+
+    }
+
+    .input-group input,
+    .input-group select{
+
+        padding:13px;
+
+        font-size:15px;
+
+    }
+
+    .button-group button{
+
+        font-size:15px;
+
+        padding:14px;
+
+    }
+
+    .result-card{
+
+        padding:22px;
+
+    }
+
+    .result-header h2{
+
+        font-size:21px;
+
+    }
+
+    #fromValue,
+    #toValue{
+
+        font-size:21px;
+
+    }
+
+}
